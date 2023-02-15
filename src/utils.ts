@@ -610,7 +610,7 @@ const utils = {
         // rootRole = rootRole || roleName;
 
         const role: any = grants[roleName];
-        // if (!role) throw new AccessControlError(`Role not found: "${roleName}"`);
+        if (!role) return [roleName];
 
         let arr: string[] = [roleName];
         if (!Array.isArray(role.$extend) || role.$extend.length === 0)
