@@ -894,7 +894,7 @@ const utils = {
         // each role to attrsList (array).
         roles.forEach((roleName: string, index: number) => {
             role = grants[roleName];
-            // no need to check role existence #getFlatRoles() does that.
+            if (!role) return;
 
             resource = role[query.resource];
             if (resource) {
