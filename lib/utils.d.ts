@@ -1,5 +1,5 @@
-import { AccessControl } from './';
-import { IAccessInfo, IQueryInfo } from './core';
+import { AccessControl } from "./";
+import { IAccessInfo, IQueryInfo } from "./core";
 /**
  *  List of reserved keywords.
  *  i.e. Roles, resources with these names are not allowed.

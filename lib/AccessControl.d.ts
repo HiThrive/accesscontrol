@@ -1,4 +1,4 @@
-import { Access, IAccessInfo, Query, IQueryInfo, Permission } from './core';
+import { Access, IAccessInfo, Query, IQueryInfo, Permission } from "./core";
 /**
  *  @classdesc
  *  AccessControl class that implements RBAC (Role-Based Access Control) basics
@@ -68,7 +68,7 @@ import { Access, IAccessInfo, Query, IQueryInfo, Permission } from './core';
  *  // since these permissions have common resources, there is an alternative way:
  *  ac.grant('admin')
  *      .resource('profile').createAny().readAny(null, ["*", "!password"])
- *      .resource('video').readAny()..deleteAny();
+ *      .resource('video').readAny().deleteAny();
  *
  *  ac.grant('user')
  *      .readOwn('profile', ["uid", "email", "address.*", "account.*", "!account.roles"])
@@ -111,7 +111,7 @@ declare class AccessControl {
      *  @param {Object|Array} [grants] - A list containing the access grant
      *      definitions. See the structure of this object in the examples.
      */
-    constructor(grants?: any);
+    constructor(grants?: any, options?: Object);
     /**
      *  Specifies whether the underlying grants object is frozen and all
      *  functionality for modifying it is disabled.
